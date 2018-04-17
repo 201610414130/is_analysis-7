@@ -150,10 +150,10 @@ ManageBookRecord "*" -- "1" Administrator:登记
 ManageBookRecord "*" -- "1" Book
 
 LendRecord "*" -- "1" Reader:借阅
-bookRecord "*" -- "1" Reader:预定
+BookRecord "*" -- "1" Reader:预定
 
 LendRecord "*" -- "1" Book
-bookRecord "*" -- "1" Book
+BookRecord "*" -- "1" Book
 
 @enduml
 ```
