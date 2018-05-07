@@ -84,7 +84,7 @@
 - 顺序图参见：图书归还顺序图
 - API接口如下：
 
-1. 获取全部分类
+1. 获取用户未归还图书API
 
 - 功能：用于获取某用户全部未归还图书
 - 请求地址： http://localhost/v1/api/get_unreturnbooks_4reader
@@ -142,7 +142,7 @@
 |length|未归还图书集合的长度|
 |status|获取结果，为1时表示成功获取，为0时表示获取失败|
 
-2. 提交归还图书请求
+2. 归还图书API
 - 功能：用于向系统提交需要归还的图书项目
 - 请求地址： http://localhost/v1/api/return_books
 - 请求方法：POST
