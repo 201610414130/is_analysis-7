@@ -138,15 +138,15 @@ Administrator <-- User:操作结果
 actor Administrator
 
 Administrator -> Book:管理图书
-Book -> ManagerBookRecord:保存管理记录
-ManagerBookRecord --> Administrator:本次操作信息
+Book -> ManageBookRecord:保存管理记录
+ManageBookRecord --> Administrator:本次操作信息
 
 @enduml
 ```
 
 ## 6.2. 管理图书用例顺序图
-![class](sequence_ManagerBooks.png)
+![class](sequence_ManageBooks.png)
 
 ## 6.3. 管理图书用例顺序图说明
-参与者Administrator向Book对象发起管理图书的请求，Book对象根据请求进行操作，操作完成后向ManagerBookRecord对象发起保存管理记录的请求，保存操作完成后向参与者Administrator返回操作结果。
+参与者Administrator向Book对象发起管理图书的请求，Book对象根据请求进行操作，操作完成后向ManageBookRecord对象发起保存管理记录的请求，保存操作完成后向参与者Administrator返回操作结果。
 ***
