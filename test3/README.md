@@ -106,7 +106,7 @@ class LendRecord{
     startDate
     activeTime
     isRenew
-    isReturn
+    returnDate
     --Getter & Setter--
     getUserID()
     getISBN()
@@ -114,14 +114,14 @@ class LendRecord{
     getStartDate()
     getActiveTime()
     isRenew()
-    isReturn()
+    getReturnDate()
     setUserID()
     setISBN()
     setActon()
     setStartDate()
     setActiveTime()
     setIsRenew()
-    setIsReturn()
+    setReturnDate()
 }
 
 class BookRecord{
@@ -146,7 +146,7 @@ class BookRecord{
 Student --|> Reader
 Teacher --|> Reader
 
-ManageBookRecord "*" -- "1" Administrator:登记
+ManageBookRecord "*" -- "1" Administrator:记录
 ManageBookRecord "*" -- "1" Book
 
 LendRecord "*" -- "1" Reader:借阅
@@ -291,7 +291,7 @@ object LendRecord{
     startDate:2018-04-12
     activeTime:30
     isRenew:false
-    isReturn:false
+    returnDate:2018-05-11
 }
 @enduml
 ``` 
