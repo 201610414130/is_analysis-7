@@ -124,10 +124,10 @@
 		"returnDate": "null"
 	}],
     "readerLendBook": {
-        "userID": "螺蛳粉 ",
-        "username": "食品加工",
-        "major": "2015级",
-        "grade": "322"
+        "userID": "201510418736",
+        "username": "螺蛳粉",
+        "major": "食品加工",
+        "grade": "2015级"
     },
 	"length": "3",
 	"status": "1"
@@ -156,7 +156,7 @@
 - 返回实例：
 ```
 {
-	"length": "3",
+	"length": "2",
 	"status": "1"
 }
 ```
