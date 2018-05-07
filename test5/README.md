@@ -20,29 +20,29 @@
 |字段|类型|主键，外键|可以为空|默认值|约束|说明|
 |:-------:|:-------------:|:------:|:----:|:---:|:----:|:-----|
 |userID|varchar2(32)|主键|否||||
-|username|varchar2(32)| |否||'管理员'||
-|password|varchar2(32)| |否||'123456'|为空时密码为123456，密码采用32位MD5加密|
+|username|varchar2(32)| |否| '管理员'|||
+|password|varchar2(32)| |否| '123456'| |为空时密码为123456，密码采用32位MD5加密|
 
 ## 1.3. Reader表
 |字段|类型|主键，外键|可以为空|默认值|约束|说明|
 |:-------:|:-------------:|:------:|:----:|:---:|:----:|:-----|
 |userID|varchar2(32)|主键|否||||
 |username|varchar2(32)| |否| | ||
-|password|varchar2(32)| |否| | |为空时密码为123456，密码采用32位MD5加密|
-|academy|varchar2(50)| |是| | |该读者所在的学院| 
+|password|varchar2(32)| |否| '123456'| | 为空时密码为123456，密码采用32位MD5加密|
+|academy|varchar2(50)| |是| | |该读者所在学院| 
 
 ## 1.4. Student表
 |字段|类型|主键，外键|可以为空|默认值|约束|说明|
 |:-------:|:-------------:|:------:|:----:|:---:|:----:|:-----|
 |userID|varchar2(32)|主键、外键|否|| |Reader.userID|
-|major|varchar2(50)| |否| | |学生的专业|
-|grade|varchar2(10)| |否| | |学生的年级|
+|major|varchar2(50)| |否| | |学生专业|
+|grade|varchar2(10)| |否| | |学生年级|
 
 ## 1.5. Teacher表
 |字段|类型|主键，外键|可以为空|默认值|约束|说明|
 |:-------:|:-------------:|:------:|:----:|:---:|:----:|:-----|
 |userID|varchar2(32)|主键、外键|否| |Reader.userID||
-|positionalTitle|varchar2(50)| |否| | |老师的职称|
+|positionalTitle|varchar2(50)| |否| | |老师职称|
 
 ## 1.6. ManageBookRecord表
 |字段|类型|主键，外键|可以为空|默认值|约束|说明|
@@ -61,7 +61,7 @@
 |userID|varchar2(32)|外键|否| |Reader.userID||
 |ISBN|varchar2(14)|外键|否| |Book.ISBN||
 |startDate|datetime| |否| | |借阅图书的开始时间|
-|activeTime|int| |否|30| |一次借阅时间长度，单位是天|
+|activeTime|int| |否|30| |一次借阅时间长度，单位为天|
 |isRenew|tinyint| |否|0| 0-1|是否续借图书，1为已续借，0为未续借|
 |returnDate|datetime| |否| | |归还图书的时间，若为空代表未归还|
 
@@ -72,7 +72,7 @@
 |userID|varchar2(32)|外键|否| |Reader.userID||
 |ISBN|varchar2(14)|外键|否| |Book.ISBN||
 |bookDate|datetime| |否| | |预定图书的时间|
-|activeTime|int| |否|7| |预定图书的有效期，单位是天|
+|activeTime|int| |否|7| |预定图书的有效期，单位为天|
 |isCannel|tinyint| |否|0| 0-1|此预订是否取消，1表示已取消，0表示未取消|
 ***
 
@@ -165,7 +165,7 @@
 |参数名称|说明|
 |:-------:|:-------------: |
 |length|成功归还图书数量|
-|status|获取执行结果，为1时表示成功执行，为0时表示执行失败|
+|status|获取执行结果，为1时表示都成功执行，为0时表示存在执行失败|
 
 
  
