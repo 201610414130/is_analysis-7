@@ -63,7 +63,7 @@
 |startDate|datetime| |否| | |借阅图书的开始时间|
 |activeTime|int| |否|30| |一次借阅时间长度，单位为天|
 |isRenew|tinyint| |否|0| 0-1|是否续借图书，1为已续借，0为未续借|
-|returnDate|datetime| |否| | |归还图书的时间，若为空代表未归还|
+|returnDate|datetime| |是| | |归还图书的时间，若为空代表未归还|
 
 ## 1.8. BookRecord表
 |字段|类型|主键，外键|可以为空|默认值|约束|说明|
