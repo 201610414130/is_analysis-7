@@ -99,29 +99,29 @@
 ```
 {
 	"unreturnbooks_4reader": [{
-		"ISDN": "9787513506915",
+		"ISBN": "9787513506915",
 		"bookname": "翻译美学理论",
 		"author": "刘宓庆",
 		"startDate": "2018-03-03",
-		"isRenew": "true",
-		"activeTime": "30",
-		"returnDate": "null"
+		"isRenew": "true,
+		"activeTime": 30,
+		"returnDate": null
 	}, {
-        "ISDN": "9787544627634",
+        "ISBN": "9787544627634",
 		"bookname": "翻译能力培养",
 		"author": "舍夫纳",
 		"startDate": "2018-03-15",
-		"isRenew": "true",
-		"activeTime": "30",
-		"returnDate": "null"
+		"isRenew": true,
+		"activeTime": 30,
+		"returnDate": null
 	}, {
-        "ISDN": "9787310028306",
+        "ISBN": "9787310028306",
 		"bookname": "当代国外翻译理论导读",
 		"author": "谢天振",
 		"startDate": "2018-04-21",
-		"isRenew": "false",
-		"activeTime": "30",
-		"returnDate": "null"
+		"isRenew": false,
+		"activeTime": 30,
+		"returnDate": null
 	}],
     "readerLendBook": {
         "userID": "201510418736",
@@ -129,8 +129,8 @@
         "major": "食品加工",
         "grade": "2015级"
     },
-	"length": "3",
-	"status": "1"
+	"length": 3,
+	"status": 1
 }
 ```
 - 返回参数说明：
@@ -151,13 +151,13 @@
 |参数名称|必填|说明|
 |:-------:|:-------------: | :----------:|
 |userID|是|根据读者编号归还其借阅图书 |
-|ISDN|是|待归还图书的ISBN号 |
+|ISBN|是|待归还图书的ISBN号 |
 
 - 返回实例：
 ```
 {
-	"length": "2",
-	"status": "1"
+	"length": 2,
+	"status": 1
 }
 ```
 - 返回参数说明：
