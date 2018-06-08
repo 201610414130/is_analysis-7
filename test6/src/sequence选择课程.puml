@@ -1,0 +1,8 @@
+@startuml
+title 基于GitHub的课程实验管理平台--选择课程用例的顺序图
+actor users
+users -> Choice: 系统为用户注册选课信息
+Choice -> Experience
+Experience --> users : 操作结果
+
+@enduml

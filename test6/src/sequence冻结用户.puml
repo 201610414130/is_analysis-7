@@ -1,0 +1,6 @@
+@startuml
+title 基于GitHub的课程实验管理平台--冻结用户用例的顺序图
+actor administrators
+administrators -> User : 输入用户ID
+User --> administrators : 返回更改后状态
+@enduml

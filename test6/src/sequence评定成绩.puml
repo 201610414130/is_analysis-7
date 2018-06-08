@@ -1,0 +1,14 @@
+@startuml
+title 基于GitHub的实验管理平台--评定成绩用例的顺序图
+actor teachers
+== 查看成绩 ==
+teachers -> Choice : 选择课程，实验，班级
+Choice -> Student :
+Student -> Experience
+Experience -> Element
+Element -> Score
+Score --> teachers:该实验的各个评分项内容，成绩和评语以及该学生的详细信息
+== 评定成绩 ==
+teachers -> Element : 录入并提交每个实验各个评分项的成绩和评语
+Element -> Score : 系统自动计算并保存实验的最终成绩和评语
+@enduml

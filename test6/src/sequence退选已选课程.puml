@@ -1,0 +1,8 @@
+@startuml
+title 基于GitHub的课程实验管理平台--退选已选课程用例的顺序图
+actor teachers
+teachers -> Choice : 提交choice_ID
+Choice -> Experience
+Experience -> Element
+Element --> teachers : 删除结果
+@enduml

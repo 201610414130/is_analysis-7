@@ -1,0 +1,6 @@
+@startuml
+title 基于GitHub的课程实验管理平台--修改登录密码用例的顺序图
+actor users
+users -> User: 提交原密码和新密码
+User --> users : 更改结果
+@enduml

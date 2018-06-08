@@ -1,0 +1,8 @@
+@startuml
+title 基于GitHub的课程实验管理平台--查询用户用例的顺序图
+actor administrators
+administrators -> User : 输入查询信息
+User -> Teacher
+Teacher -> Student
+Student --> administrators : 查询结果
+@enduml

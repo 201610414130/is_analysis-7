@@ -1,0 +1,7 @@
+@startuml
+title 基于GitHub的课程实验管理平台--增加老师用户用例的顺序图
+actor administrators
+administrators -> User : 提交老师用户的信息
+User -> Teacher
+Teacher --> administrators : 创建用户结果
+@enduml

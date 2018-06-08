@@ -1,0 +1,6 @@
+@startuml
+title 基于GitHub的课程实验管理平台--修改个人资料用例的顺序图
+actor users
+users -> User: 提交新用户信息
+User --> users : 更改结果
+@enduml

@@ -1,0 +1,97 @@
+@startuml
+
+class User {
+    <b>user_ID</b> (用户ID)
+    username (真实姓名)
+    password (登录密码)
+    githubname (github用户名)
+    disable (用户是否被禁用)
+    permission (权限)
+    --Getter & Setter--
+    ...
+}
+
+class Teacher {
+    <b>teacher_ID</b> (老师工号)
+    user_ID (用户ID)
+    department (老师所属部门)
+    --Getter & Setter--
+    ...
+}
+
+class Student {
+    <b>student_ID</b> (学号)
+    user_ID (用户ID)
+    class (班级)
+    --Getter & Setter--
+    ...
+}
+
+class Administrator {
+    <b>user_ID</b> (用户ID)
+    tel (手机号)
+    --Getter & Setter--
+    ...
+}
+
+class Course {
+    <b>course_ID</b> (课程ID)
+    course_name (课程名称)
+    course_hour (总课时)
+    --Getter & Setter--
+    ...
+}
+
+class Choice {
+    <b>choice_ID</b> (选课ID)
+    course_ID (课程ID)
+    user_ID_teacher (用户ID)
+    user_ID_student (用户ID)
+    school_year (学年)
+    --Getter & Setter--
+    ...
+}
+
+class Experience {
+    <b>exper_ID</b> (实验ID)
+    choice_ID (选课ID)
+    exper_name (实验名称)
+    exper_address (实验github地址)
+    --Getter & Setter--
+    ...
+}
+
+class Element {
+    <b>element_ID</b> (打分项ID)
+    exper_ID (实验ID)
+    element_name (打分项名称)
+    persent (分数百分比占比)
+    --Getter & Setter--
+    ...
+}
+
+class Score {
+    <b>score_ID</b> (成绩ID)
+    exper_ID (实验ID)
+    score (实验分数)
+    isCheat (是否作弊)
+    comment (实验评论)
+    --Getter & Setter--
+    ...
+}
+
+Student --|> User
+Teacher --|> User
+Administrator --|> User
+
+Choice "*" -- "1" Teacher:选课
+Choice "*" -- "1" Student:选课
+Choice "*" -- "1" Course
+
+Experience "*" -- "1" Choice:课程实验
+Element "*" -- "1" Experience:实验打分项
+Score "1" -- "1" Experience:实验成绩
+
+
+
+@enduml

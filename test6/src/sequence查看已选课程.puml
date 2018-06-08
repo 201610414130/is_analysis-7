@@ -1,0 +1,14 @@
+@startuml
+title 基于GitHub的课程实验管理平台--查看已选课程用例的顺序图
+actor users
+alt 如果users是teachers
+users -> Choice : 选择课程，实验，班级
+Choice -> Course
+Course --> users:该课程的详细信息
+else 如果users是students
+users -> Choice : 选择课程，实验，班级
+Choice -> Course
+Course -> Teacher
+Teacher --> users:该课程的详细信息及选课老师的信息
+end
+@enduml

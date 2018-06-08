@@ -1,0 +1,6 @@
+@startuml
+title 基于GitHub的课程实验管理平台--删除课程用例的顺序图
+actor administrators
+administrators -> Course : 输入删除课程ID
+Course --> administrators : 删除结果
+@enduml

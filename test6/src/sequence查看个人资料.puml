@@ -1,0 +1,8 @@
+@startuml
+title 基于GitHub的课程实验管理平台--查看个人资料用例的顺序图
+actor users
+users -> User: 提交用户ID
+User -> Teacher
+Teacher -> Student
+Student --> users : 返回用户信息
+@enduml

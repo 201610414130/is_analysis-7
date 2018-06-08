@@ -1,0 +1,7 @@
+@startuml
+title 基于GitHub的课程实验管理平台--增加实验用例的顺序图
+actor teachers
+teachers -> Element : 录入各个评分项的名称和百分比
+Element -> Score : 录入实验的名称和github地址
+Score --> teachers : 录入结果
+@enduml

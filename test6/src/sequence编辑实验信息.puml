@@ -1,0 +1,13 @@
+@startuml
+title 基于GitHub的课程实验管理平台--编辑实验信息用例的顺序图
+actor teachers
+== 查看实验信息 ==
+teachers -> Choice : 选择课程，实验，班级
+Choice -> Experience :
+Experience -> Element
+Element --> teachers:该实验的各个评分项内容和实验信息
+== 编辑实验信息 ==
+teachers -> Experience : 录入实验的名称和github地址，存在的各个评分项的名称和百分比
+Experience -> Element
+Element --> teachers : 录入结果
+@enduml

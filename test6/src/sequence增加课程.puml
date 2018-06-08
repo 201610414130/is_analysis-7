@@ -1,0 +1,6 @@
+@startuml
+title 基于GitHub的课程实验管理平台--增加课程用例的顺序图
+actor administrators
+administrators -> Course : 提交课程信息
+Course --> administrators : 增加课程结果
+@enduml

@@ -1,0 +1,10 @@
+@startuml
+title 基于GitHub的实验管理平台--查看成绩用例的顺序图
+actor students
+students -> Choice : 选择学年，课程，实验
+Choice -> Student :
+Student -> Experience
+Experience -> Element
+Element -> Score
+Score --> students:该实验的各个评分项内容，成绩和评语以及该学生的详细信息
+@enduml

@@ -1,0 +1,6 @@
+@startuml
+title 基于GitHub的课程实验管理平台--查询课程用例的顺序图
+actor administrators
+administrators -> Course : 输入查询课程信息
+Course --> administrators : 查询结果
+@enduml

@@ -1,0 +1,7 @@
+@startuml
+title 基于GitHub的课程实验管理平台--查询实验用例的顺序图
+actor teachers
+teachers -> Choice : 选择课程
+Choice -> Experience
+Experience --> teachers:实验的详细信息
+@enduml
