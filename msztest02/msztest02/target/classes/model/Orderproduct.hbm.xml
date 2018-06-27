@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2018-6-19 11:07:24 by Hibernate Tools 3.5.0.Final -->
+<hibernate-mapping>
+    <class name="model.Orderproduct" table="orderproduct">
+        <id name="orderProductID" type="java.lang.String">
+            <column name="orderProductID" />
+            <generator class="assigned" />
+        </id>
+        <property name="orderID" type="java.lang.String">
+            <column name="orderID" />
+        </property>
+        <property name="productID" type="java.lang.String">
+            <column name="productID" />
+        </property>
+        <property name="sellPrice" type="double">
+            <column name="sellPrice" />
+        </property>
+        <property name="sellBoxNum" type="long">
+            <column name="sellBoxNum" />
+        </property>
+        <property name="BoxOwn" type="int">
+            <column name="BoxOwn" />
+        </property>
+        <property name="sellSingleNum" type="long">
+            <column name="sellSingleNum" />
+        </property>
+        <property name="isStock" type="boolean" access="field">
+            <column name="isStock" />
+        </property>
+        <property name="remark" type="java.lang.String">
+            <column name="REMARK" />
+        </property>
+    </class>
+</hibernate-mapping>

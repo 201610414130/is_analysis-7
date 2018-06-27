@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2018-6-19 11:07:24 by Hibernate Tools 3.5.0.Final -->
+<hibernate-mapping>
+    <class name="model.Order" table="ordermain">
+        <id name="orderID" type="java.lang.String">
+            <column name="orderID" />
+            <generator class="assigned" />
+        </id>
+        <property name="orderDate" type="java.util.Date">
+            <column name="orderDate" />
+        </property>
+        <property name="customerName" type="java.lang.String">
+            <column name="customerName" />
+        </property>
+        <property name="customerAdress" type="java.lang.String">
+            <column name="customerAdress" />
+        </property>
+        <property name="customerTel" type="java.lang.String">
+            <column name="customerTel" />
+        </property>
+        <property name="remark" type="java.lang.String">
+            <column name="remark" />
+        </property>
+        <property name="shoppingTotalPrice" type="double">
+            <column name="shoppingTotalPrice" />
+        </property>
+        <property name="afterService" type="boolean">
+            <column name="afterService" />
+        </property>
+    </class>
+</hibernate-mapping>

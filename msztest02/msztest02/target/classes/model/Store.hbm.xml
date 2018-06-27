@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2018-6-19 11:07:24 by Hibernate Tools 3.5.0.Final -->
+<hibernate-mapping>
+    <class name="model.Store" table="store">
+        <id name="storeID" type="java.lang.String">
+            <column name="storeID" />
+            <generator class="assigned" />
+        </id>
+        <property name="storeDate" type="java.util.Date">
+            <column name="storeDate" />
+        </property>
+        <property name="productID" type="java.lang.String">
+            <column name="productID" />
+        </property>
+        <property name="factoryName" type="java.lang.String">
+            <column name="factoryName" />
+        </property>
+        <property name="size1" type="int">
+            <column name="size1" />
+        </property>
+        <property name="size2" type="int">
+            <column name="size2" />
+        </property>
+        <property name="oriPrice" type="double">
+            <column name="oriPrice" />
+        </property>
+        <property name="boxNum" type="long">
+            <column name="boxNum" />
+        </property>
+        <property name="boxOwn" type="int">
+            <column name="boxOwn" />
+        </property>
+        <property name="singleNum" type="long">
+            <column name="singleNum" />
+        </property>
+        <property name="storeTotalPrice" type="double">
+            <column name="storeTotalPrice" />
+        </property>
+        <property name="remark" type="java.lang.String">
+            <column name="remark" />
+        </property>
+    </class>
+</hibernate-mapping>

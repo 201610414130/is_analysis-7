@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	 "http://struts.apache.org/dtds/struts-2.3.dtd">
+ <struts>
+ 	<constant name="struts.multipart.maxSize" value="55000000"/><!-- 可上传50M的文件 -->  
+ 	<constant name="struts.ognl.allowStaticMethodAccess" value="true"></constant>
+ 	<package name="struts" extends="struts-default">
+ 	<interceptors>
+ 			<interceptor name="OrderIDForAfterServiceInterceptor" class="orderIDForAfterServiceInterceptor" ></interceptor>
+ 	</interceptors>
+ 		<action name="storeProduct" class="storeAction">
+ 			<result name="success">storeProductIndex.jsp</result>
+ 			<result name="error">error.jsp</result>
+ 			<result name="input">storeProductIndex.jsp</result>
+ 		</action>
+ 		<action name="shopping" class="shoppingAction">
+ 			<result name="success">shoppingIndex.jsp</result>
+ 			<result name="error">error.jsp</result>
+ 			<result name="input">shoppingIndex.jsp</result>
+ 		</action>
+ 		<action name="getOrder" class="serviceAction" method="getOrderForService">
+ 			<result name="success">serviceIndex.jsp</result>
+ 			<result name="error">error.jsp</result>
+ 			<result name="input">serviceIndex.jsp</result>
+ 		</action>
+ 		<action name="getInventory" class="serviceAction" method="getInventoryForService">
+ 			<result name="success">InventoryServiceIndex.jsp</result>
+ 			<result name="error">error.jsp</result>
+ 			<result name="input">InventoryServiceIndex.jsp</result>
+ 		</action>
+ 		<action name="getStore" class="serviceAction" method="getStoreForService">
+ 			<result name="success">storeListIndex.jsp</result>
+ 			<result name="error">error.jsp</result>
+ 			<result name="input">storeListIndex.jsp</result>
+ 		</action>
+ 		<action name="revokeStore" class="revokeAction" method="storeRevoke">
+ 			<result name="success" type="redirectAction">getStore</result>
+ 			<result name="error">error.jsp</result>
+ 		</action>
+ 		<action name="stockOut" class="shoppingAction" method="stockOut">
+ 			<result name="success" type="redirectAction">getOrder</result>
+ 			<result name="error">error.jsp</result>
+ 		</action>
+ 		<action name="stockOutInAfterService" class="shoppingAction" method="stockOut">
+ 			<result name="success" type="redirectAction">getAfterServiceOrder?orderIDForAfterAction=${orderIDForAfterAction}</result>
+ 			<result name="error">error.jsp</result>
+ 		</action>
+ 		<action name="ServiceStockOutInAfterService" class="afterServiceAction" method="saveServicestockOut">
+ 			<result name="success" type="redirectAction">getAfterServiceOrder?orderIDForAfterAction=${orderIDForAfterAction}</result>
+ 			<result name="error">error.jsp</result>
+ 		</action>
+ 		<action name="getAfterServiceOrder" class="afterServiceAction" method="getAfterServiceOrder">
+ 			<result name="success">afterServiceIndex.jsp</result>
+ 			<result name="error">error.jsp</result>
+ 		</action>
+ 		<action name="storeAfterService" class="afterServiceAction" method="storeAfterService">
+ 			<result name="success" type="redirectAction">getAfterServiceOrder?orderIDForAfterAction=${orderIDForAfterAction}</result>
+ 			<result name="error">error.jsp</result>
+ 		</action>
+ 		<action name="storeToAjax" class="ajaxAcion" method="storeToAjax">
+ 		</action>
+ 	</package>
+ </struts>

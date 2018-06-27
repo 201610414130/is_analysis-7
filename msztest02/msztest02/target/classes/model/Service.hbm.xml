@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2018-6-19 11:07:24 by Hibernate Tools 3.5.0.Final -->
+<hibernate-mapping>
+    <class name="model.Service" table="service">
+        <id name="serverID" type="java.lang.String">
+            <column name="serverID" />
+            <generator class="assigned" />
+        </id>
+        <property name="orderID" type="java.lang.String">
+            <column name="orderID" />
+        </property>
+        <property name="serviceTime" type="java.util.Date">
+            <column name="serviceTime" />
+        </property>
+        <property name="productID" type="java.lang.String">
+            <column name="productID" />
+        </property>
+        <property name="type" type="boolean">
+            <column name="type" />
+        </property>
+        <property name="remark" type="java.lang.String">
+            <column name="remark" />
+        </property>
+    </class>
+</hibernate-mapping>
